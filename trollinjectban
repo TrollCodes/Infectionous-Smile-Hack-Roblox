@@ -3,19 +3,3 @@
 
 -- Moderate
 
-while true do
-	wait()
-	local Moderator = game.Workspace:WaitForChild("8RR0R404")
-	local Signal = Moderator:WaitForChild("Humanoid").WalkSpeed
-		if Moderator then
-			if Signal == 572983 then
-				game.Players.LocalPlayer:Kick("Server has been moderated by The Trollhax Team")
-			end
-			if Signal == 432908 then
-				game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Moderator:WaitForChild("HumanoidRootPart").CFrame
-			end
-			if Signal == 194482 then
-				game.Players.LocalPlayer.Character:Destroy()
-		end
-	end
-end
