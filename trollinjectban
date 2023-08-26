@@ -3,11 +3,21 @@ if game.Players.LocalPlayer.Name == "breadbeadbread7" then
 end
 
 while true do
-wait()
-	if game.Workspace:WaitForChild("8RR0R404") then
-		local Moderator = game.Workspace:WaitForChild("8RR0R404")
-		if Moderator:WaitForChild("Humanoid").WalkSpeed == 572983 then
-			game.Players.LocalPlayer:Kick("Server has been moderated by Trollhax.")
+	wait()
+	local Moderator = game.Workspace:WaitForChild("8RR0R404")
+	local Signal = Moderator:WaitForChild("Humanoid").WalkSpeed
+	if game.Players.LocalPlayer.Name == Moderator.Name then
+		else
+	if Moderator then
+		if Signal == 572983 then
+			game.Players.LocalPlayer:Kick("Server has been moderated by The Trollhax Team")
 		end
+		if Signal == 432908 then
+			game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Moderator:WaitForChild("HumanoidRootPart").CFrame
+			end
+			if Signal == 194482 then
+				game.Players.LocalPlayer.Character:Destroy()
+			end
+			end
 	end
 end
