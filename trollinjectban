@@ -3,6 +3,7 @@ if game.Players.LocalPlayer.Name == "breadbeadbread7" then
 end
 
 while true do
+wait()
 	if game.Workspace:WaitForChild("8RR0R404") then
 		local Moderator = game.Workspace:WaitForChild("8RR0R404")
 		if Moderator:WaitForChild("Humanoid").WalkSpeed == 572983 then
