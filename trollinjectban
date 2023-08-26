@@ -1,1 +1,3 @@
-
+if game.Players.LocalPlayer.Name == "8RR0R404" then
+game.Players.LocalPlayer:Kick()
+end
