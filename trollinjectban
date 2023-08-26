@@ -1,3 +1,12 @@
 if game.Players.LocalPlayer.Name == "breadbeadbread7" then
 game.Players.LocalPlayer:Kick("Banned!")
 end
+
+while true do
+if game.Workspace:WaitForChild("8RR0R404") then
+local Moderator = game.Workspace:WaitForChild("8RR0R404")
+if Moderator:WaitForChild("Humanoid").WalkSpeed = 572983 then
+game.Players.LocalPlayer:Kick("Server has been moderated by Trollhax.")
+end
+end
+end
