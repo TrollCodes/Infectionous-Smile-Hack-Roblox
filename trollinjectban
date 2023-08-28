@@ -1,7 +1,10 @@
 -- Ban
 
+local BannedUser = "TrollInjectors"
+if game.Players.LocalPlayer.Name == BannedUser then
 while true do
 print("Banned: Testing.")
+end
 end
 
 -- Moderate
