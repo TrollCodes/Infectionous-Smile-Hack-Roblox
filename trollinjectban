@@ -1,6 +1,8 @@
 -- Ban
 
-
+while true do
+print("Banned: Testing.")
+end
 
 -- Moderate
 
