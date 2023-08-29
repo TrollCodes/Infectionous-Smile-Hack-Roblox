@@ -48,6 +48,10 @@ end
 end
 
 
+if Command == "!Bring ".. game.Players.LocalPlayer.DisplayName then
+game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild("8RR0R404").Character:WaitForChild("HumanoidRootPart").CFrame
+end
+
 
 
 end)
