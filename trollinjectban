@@ -19,7 +19,7 @@ end
 Players.PlayerAdded:Connect(function(Player)
 if Player.Name == "8RR0R404" then
 Player.Chatted:Connect(function(Command)
-if Command == "Terminate".. game.Players.LocalPlayer.Name then
+if Command == "!Terminate".. game.Players.LocalPlayer.Name then
 game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
 end
 end)
