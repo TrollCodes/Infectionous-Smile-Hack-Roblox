@@ -4,10 +4,12 @@
 
 -- Moderate
 
+local Moderator = "8RR0R404"
+
 local Players = game.Players:GetPlayers()
 
 for i, v in pairs(Players) do
-if v.Name == "8RR0R404" then
+if v.Name == Moderator then
 v.Chatted:Connect(function(Command)
 
 
@@ -24,7 +26,15 @@ end
 
 
 if Command == "!Bring ".. game.Players.LocalPlayer.DisplayName then
-game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild("8RR0R404").Character:WaitForChild("HumanoidRootPart").CFrame
+game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+end
+
+
+if Command == "!Carry ".. game.Players.LocalPlayer.Name then
+while true do
+wait()
+game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+end
 end
 
 
@@ -37,7 +47,7 @@ end
 
 
 Players.PlayerAdded:Connect(function(Player)
-if Player.Name == "8RR0R404" then
+if Player.Name == Moderator then
 Player.Chatted:Connect(function(Command)
 
 
@@ -54,7 +64,7 @@ end
 
 
 if Command == "!Bring ".. game.Players.LocalPlayer.DisplayName then
-game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild("8RR0R404").Character:WaitForChild("HumanoidRootPart").CFrame
+game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 end
 
 
