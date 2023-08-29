@@ -1,4 +1,4 @@
-
+-- Ban
 
 
 
@@ -36,8 +36,8 @@ for i, v in pairs(Players) do
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
-			
-			
+
+
 			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
@@ -46,8 +46,8 @@ for i, v in pairs(Players) do
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = false
 			end
-			
-			
+
+
 			if Command == "!Kill ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.Health = 0
 			end
@@ -87,10 +87,10 @@ game.Players.PlayerAdded:Connect(function(Player)
 				repeat
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
-				until game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+				until game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health == 0
 			end
-			
-			
+
+
 			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
