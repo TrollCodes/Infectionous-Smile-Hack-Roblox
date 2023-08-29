@@ -43,6 +43,8 @@ for i, v in pairs(Players) do
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
 				game.Players.LocalPlayer.Character.Humanoid.Sit = true
+				wait(0.1)
+				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = false
 			end
 			
 			
