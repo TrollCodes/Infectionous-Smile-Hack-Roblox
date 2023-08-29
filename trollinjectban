@@ -1,9 +1,6 @@
 -- Ban
 
-if game.Players.LocalPlayer.Name == "breadbeadbread7" then
-while true do
-end
-end
+
 
 -- Moderate
 
