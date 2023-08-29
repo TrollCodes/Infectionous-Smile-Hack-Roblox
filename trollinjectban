@@ -30,7 +30,7 @@ for i, v in pairs(Players) do
 			end
 
 
-			if Command == "!Carry ".. game.Players.LocalPlayer.Name then
+			if Command == "!Carry ".. game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
@@ -38,7 +38,7 @@ for i, v in pairs(Players) do
 			end
 			
 			
-			if Command == "!Fling ".. game.Players.LocalPlayer.Name then
+			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
@@ -48,7 +48,7 @@ for i, v in pairs(Players) do
 			end
 			
 			
-			if Command == "!Kill ".. game.Players.LocalPlayer.Name then
+			if Command == "!Kill ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.Health = 0
 			end
 
@@ -83,7 +83,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			if Command == "!Carry ".. game.Players.LocalPlayer.Name then
+			if Command == "!Carry ".. game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
@@ -91,7 +91,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 			
 			
-			if Command == "!Fling ".. game.Players.LocalPlayer.Name then
+			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
@@ -99,7 +99,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			if Command == "!Kill ".. game.Players.LocalPlayer.Name then
+			if Command == "!Kill ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.Health = 0
 			end
 
