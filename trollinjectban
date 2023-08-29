@@ -36,6 +36,19 @@ for i, v in pairs(Players) do
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
+			
+			
+			if Command == "!Fling ".. game.Players.LocalPlayer.Name then
+				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+				game.Players.LocalPlayer.Character.Humanoid.Jump = true
+				game.Players.LocalPlayer.Character.Humanoid.Sit = true
+			end
+			
+			
+			if Command == "!Kill ".. game.Players.LocalPlayer.Name then
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			end
 
 
 
@@ -73,6 +86,19 @@ game.Players.PlayerAdded:Connect(function(Player)
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
+			end
+			
+			
+			if Command == "!Fling ".. game.Players.LocalPlayer.Name then
+				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+				game.Players.LocalPlayer.Character.Humanoid.Jump = true
+				game.Players.LocalPlayer.Character.Humanoid.Sit = true
+			end
+
+
+			if Command == "!Kill ".. game.Players.LocalPlayer.Name then
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0
 			end
 
 
