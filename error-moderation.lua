@@ -1,5 +1,4 @@
 local Moderator = "8RR0R404"
-print("Mods: ".. Moderator)
 
 local Players = game.Players:GetPlayers()
 
@@ -58,27 +57,16 @@ for i, v in pairs(Players) do
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
-			
-			
+
+
 			local CommandData = {}
 			for Data in Command:gmatch("[^%s]+") do
 				table.insert(CommandData, Data)
 			end
-			
+
 			if CommandData[1] == "!Kick" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					game.Players.LocalPlayer:Kick(CommandData[3])
-				end
-			end
-			
-			if CommandData[1] == "!Teleport" then
-				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					for i, v in pairs(game:GetPlayers()) do
-						if v.DisplayName = CommandData[3] then
-							local Target = v
-						end
-					end
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Target.Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
 
@@ -181,8 +169,8 @@ game.Players.PlayerAdded:Connect(function(Player)
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
-			
-			
+
+
 			local CommandData = {}
 			for Data in Command:gmatch("[^%s]+") do
 				table.insert(CommandData, Data)
@@ -196,30 +184,24 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if CommandData[1] == "!Teleport" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandData[3]).Character:WaitForChild("HumanoidRootPart").CFrame
-				end
-			end
-
-
-			local CommandData = {}
-			for Data in Command:gmatch("[^%s]+") do
-				table.insert(CommandData, Data)
-			end
-			
-			if CommandData[1] == "!Kick" then
-				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer:Kick(CommandData[3])
-				end
-			end
-			
-			if CommandData[1] == "!Teleport" then
-				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					for i, v in pairs(game:GetPlayers()) do
-						if v.DisplayName = CommandData[3] then
+					for i, v in pairs(game.Players:GetPlayers()) do
+						if v.DisplayName == CommandData[3] then
 							local Target = v
 						end
 					end
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Target.Character:WaitForChild("HumanoidRootPart").CFrame
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild(Target):WaitForChild("HumanoidRootPart").CFrame
+				end
+			end
+
+
+			local CommandData = {}
+			for Data in Command:gmatch("[^%s]+") do
+				table.insert(CommandData, Data)
+			end
+
+			if CommandData[1] == "!Kick" then
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(CommandData[3])
 				end
 			end
 
