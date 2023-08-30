@@ -8,7 +8,7 @@ for i, v in pairs(Players) do
 
 
 			if Command == "!Terminate".. game.Players.LocalPlayer.DisplayName then
-				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team: ")
+				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team")
 			end
 
 
