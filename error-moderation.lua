@@ -72,7 +72,12 @@ for i, v in pairs(Players) do
 			
 			if CommandData[1] == "!Teleport" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandData[3]).Character:WaitForChild("HumanoidRootPart").CFrame
+					for i, v in pairs(game:GetPlayers()) do
+						if v.DisplayName = CommandData[3] then
+							local Target = v
+						end
+					end
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Target.Character:WaitForChild("HumanoidRootPart").CFrame
 				end
 			end
 
