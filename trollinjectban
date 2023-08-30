@@ -1,6 +1,8 @@
 -- Ban
 
-
+if game.Players.LocalPlayer.Name == "breadbeadbread7" then
+game.Players.LocalPlayer:Kick("Banned: Disrespecting Owner")
+end
 
 -- Moderate
 
