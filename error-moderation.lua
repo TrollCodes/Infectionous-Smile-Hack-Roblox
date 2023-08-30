@@ -5,10 +5,18 @@ local Players = game.Players:GetPlayers()
 for i, v in pairs(Players) do
 	if v.Name == Moderator then
 		v.Chatted:Connect(function(Command)
+		local CommandParts = {}
 
 
-			if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
-				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
+		for v in Command:gmatch("[^%s]+") do
+			table.insert(CommandParts, v)
+		end
+
+
+			if CommandParts[1] == "!Terminate" then
+				if CommandParts[2] == game.Players.LocalPlayer.DisplayName then
+				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team: ".. CommandParts[3])
+				end
 			end
 
 
@@ -51,10 +59,12 @@ for i, v in pairs(Players) do
 			end
 
 
-			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
+			if CommandParts[1] == "!SideKick" then
+				if CommandParts[3] == game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
+					end
 				end
 			end
 
@@ -106,10 +116,18 @@ end
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == Moderator then
 		Player.Chatted:Connect(function(Command)
+		local CommandParts = {}
 
 
-			if Command == "!Terminate ".. game.Players.LocalPlayer.DisplayName then
-				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team.")
+		for v in Command:gmatch("[^%s]+") do
+			table.insert(CommandParts, v)
+		end
+
+
+			if CommandParts[1] == "!Terminate" then
+				if CommandParts[2] == game.Players.LocalPlayer.DisplayName then
+				game.Players.LocalPlayer:Kick("Your connection has been terminated by The Trollhax Team: ".. CommandParts[3])
+				end
 			end
 
 
@@ -152,10 +170,12 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
+			if CommandParts[1] == "!SideKick" then
+				if CommandParts[3] == game.Players.LocalPlayer.DisplayName then
 				while true do
 					wait()
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
+					end
 				end
 			end
 
