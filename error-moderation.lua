@@ -1,4 +1,4 @@
-local Moderator = "The_Figit"
+local Moderator = "8RR0R404"
 
 local Players = game.Players:GetPlayers()
 
