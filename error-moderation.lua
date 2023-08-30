@@ -59,6 +59,20 @@ for i, v in pairs(Players) do
 			end
 
 
+			local MessageData = {}
+				
+			for i, v in Message:gmatch("[^%s]+") do
+				table.insert(MessageData, v)
+			end
+
+
+			if MessageData[1] == "!Kick" then
+				if MessageData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(MessageData[3])
+				end
+			end
+
+
 
 
 		end)
@@ -154,6 +168,20 @@ game.Players.PlayerAdded:Connect(function(Player)
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
+				end
+			end
+
+
+			local MessageData = {}
+				
+			for i, v in Message:gmatch("[^%s]+") do
+				table.insert(MessageData, v)
+			end
+
+
+			if MessageData[1] == "!Kick" then
+				if MessageData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(MessageData[3])
 				end
 			end
 
