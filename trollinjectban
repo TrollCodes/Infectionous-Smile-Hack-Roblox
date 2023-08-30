@@ -45,7 +45,7 @@ for i, v in pairs(Players) do
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Sit = true
 				wait(0.1)
-				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = false
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 10
 			end
 
 
