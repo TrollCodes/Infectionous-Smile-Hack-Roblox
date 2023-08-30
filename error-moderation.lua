@@ -34,13 +34,15 @@ for i, v in pairs(Players) do
 
 			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+				local JumpPower = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Sit = true
 				wait(1)
-				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 10
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
 			end
 
 
@@ -89,13 +91,15 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+				local JumpPower = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Sit = true
 				wait(1)
-				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 10
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
 			end
 
 
