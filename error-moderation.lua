@@ -200,6 +200,29 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
+			local CommandData = {}
+			for Data in Command:gmatch("[^%s]+") do
+				table.insert(CommandData, Data)
+			end
+			
+			if CommandData[1] == "!Kick" then
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(CommandData[3])
+				end
+			end
+			
+			if CommandData[1] == "!Teleport" then
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					for i, v in pairs(game:GetPlayers()) do
+						if v.DisplayName = CommandData[3] then
+							local Target = v
+						end
+					end
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = Target.Character:WaitForChild("HumanoidRootPart").CFrame
+				end
+			end
+
+
 
 
 
