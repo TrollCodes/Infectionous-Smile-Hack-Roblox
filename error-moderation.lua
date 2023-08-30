@@ -67,6 +67,42 @@ end
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 game.Players.PlayerAdded:Connect(function(Player)
 	if Player.Name == Moderator then
 		Player.Chatted:Connect(function(Command)
