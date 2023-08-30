@@ -51,6 +51,14 @@ for i, v in pairs(Players) do
 			end
 
 
+			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
+				while true do
+					wait()
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+				end
+			end
+
+
 
 
 		end)
@@ -105,6 +113,14 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if Command == "!Kill ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			end
+
+
+			if Command == "!SideKick ".. game.Players.LocalPlayer.DisplayName then
+				while true do
+					wait()
+					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
+				end
 			end
 
 
