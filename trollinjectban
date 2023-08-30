@@ -96,6 +96,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			if Command == "!Fling ".. game.Players.LocalPlayer.DisplayName then
 				game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 				game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Jump = true
 				wait(0.1)
 				game.Players.LocalPlayer.Character.Humanoid.Sit = true
