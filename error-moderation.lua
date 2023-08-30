@@ -59,16 +59,16 @@ for i, v in pairs(Players) do
 			end
 
 
-			local MessageData = {}
+			local CommandData = {}
 				
-			for i, v in Message:gmatch("[^%s]+") do
-				table.insert(MessageData, v)
+			for i, v in Command:gmatch("[^%s]+") do
+				table.insert(CommandData, v)
 			end
 
 
-			if MessageData[1] == "!Kick" then
-				if MessageData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer:Kick(MessageData[3])
+			if CommandData[1] == "!Kick" then
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(CommandData[3])
 				end
 			end
 
@@ -172,16 +172,16 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			local MessageData = {}
+			local CommandData = {}
 				
-			for i, v in Message:gmatch("[^%s]+") do
-				table.insert(MessageData, v)
+			for i, v in Command:gmatch("[^%s]+") do
+				table.insert(CommandData, v)
 			end
 
 
-			if MessageData[1] == "!Kick" then
-				if MessageData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer:Kick(MessageData[3])
+			if CommandData[1] == "!Kick" then
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					game.Players.LocalPlayer:Kick(CommandData[3])
 				end
 			end
 
