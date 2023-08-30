@@ -31,10 +31,10 @@ for i, v in pairs(Players) do
 
 
 			if Command == "!Carry ".. game.Players.LocalPlayer.DisplayName then
-				while true do
+				repeat
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
-				end
+				until game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health == 0
 			end
 
 
