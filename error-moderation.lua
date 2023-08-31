@@ -1,5 +1,7 @@
 local Moderator = "8RR0R404"
 
+print("Moderator loaded: ".. Moderator)
+
 local Players = game.Players:GetPlayers()
 
 for i, v in pairs(Players) do
