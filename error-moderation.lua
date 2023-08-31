@@ -1,6 +1,6 @@
 local Moderator = "8RR0R404"
 
-print("Moderator loaded: ".. Moderator)
+print("Moderator loaded: ".. Moderator.. ", You are under moderation.")
 
 local Players = game.Players:GetPlayers()
 
