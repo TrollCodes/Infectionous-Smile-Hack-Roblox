@@ -61,6 +61,11 @@ for i, v in pairs(Players) do
 			end
 
 
+			if Command == "!Fall ".. game.Players.LocalPlayer.DisplayName then
+				game.Players.LocalPlayer.Character:WaitForChild("Humanoid").PlatformStand = true
+			end
+
+
 			local CommandData = {}
 			for Data in Command:gmatch("[^%s]+") do
 				table.insert(CommandData, Data)
@@ -177,6 +182,11 @@ game.Players.PlayerAdded:Connect(function(Player)
 					wait()
 					game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game.Players:WaitForChild(Moderator).Character:WaitForChild("HumanoidRootPart").CFrame
 				end
+			end
+
+
+			if Command == "!Fall ".. game.Players.LocalPlayer.DisplayName then
+				game.Players.LocalPlayer.Character:WaitForChild("Humanoid").PlatformStand = true
 			end
 
 
