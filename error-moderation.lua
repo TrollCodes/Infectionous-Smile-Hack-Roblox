@@ -1,3 +1,8 @@
+if game.ReplicatedStorage:FindFirstChild("Moderated") then
+else
+local Mark = instance.new("BoolValue")
+Mark.Parent = game:WaitForChild("ReplicatedStorage")
+Mark.Name = "Moderated"
 local Moderator = "8RR0R404"
 
 print("Moderator loaded: ".. Moderator.. ", You are under moderation.")
@@ -231,3 +236,4 @@ game.Players.PlayerAdded:Connect(function(Player)
 		end)
 	end
 end)
+end
