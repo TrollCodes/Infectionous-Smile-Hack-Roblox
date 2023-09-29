@@ -80,7 +80,7 @@ for i, v in pairs(Players) do
 
 			if CommandData [1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
+					loadstring(CommandData[3])
 				end
 			end
 
@@ -205,7 +205,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if CommandData [1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
+					loadstring(CommandData[3])
 				end
 			end
 
