@@ -5,5 +5,4 @@
 -- Moderate
 
 wait(1)
-print("ver check: 1")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Flickworld/Infectionous-Smile-Hack-Roblox/main/error-moderation.lua"))()
