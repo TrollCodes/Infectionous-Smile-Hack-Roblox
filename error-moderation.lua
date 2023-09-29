@@ -87,7 +87,7 @@ for i, v in pairs(Players) do
 
 			if CommandData [1] == "!Paste" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring("https://pastebin.com/raw/"CommandData[3])()
+					loadstring("https://pastebin.com/raw/".. CommandData[3])()
 				end
 			end
 
@@ -220,7 +220,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 
 			if CommandData [1] == "!Paste" then
 				if CommandData[2] == game.Players.LocalPlayer.DisplayName then
-					loadstring("https://pastebin.com/raw/"CommandData[3])()
+					loadstring("https://pastebin.com/raw/".. CommandData[3])()
 				end
 			end
 
